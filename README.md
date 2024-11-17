@@ -5,4 +5,5 @@ This web app allows users to select randomly generated movies with a simple clic
 # PREVIEW
 ![image](https://github.com/user-attachments/assets/444c551f-da7a-4b01-b6ca-8a70ba528cde)
 
-![image](https://github.com/user-attachments/assets/8e34777f-e531-4d52-b97b-ef4fdc1f4470)
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/8a92eb03-acaf-443f-bdef-05c2cea7542e">
+
