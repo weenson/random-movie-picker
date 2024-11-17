@@ -51,17 +51,37 @@ body.full-height{
     position: relative;
 }
 
+.body-movie::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(53, 53, 53), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.movie-details-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
 .body-movie.visible {
     display: flex; 
 }
 
 .movie-poster {
+    position: relative;
+    z-index: 1;
     border-radius: 10px;
     width: 240px;
     height: 360px;
 }
 
 .movie-details {
+    color: white;
     display: flex;
     flex-direction: column;
 }
@@ -71,13 +91,14 @@ body.full-height{
     display: flex;
     flex-direction: row;
     gap: 50px;
-    color: gray;
+    color: white;
 }
 
 .movie-overview {
     width: auto;
     word-wrap: break-word;
     margin-top: 10px;
+    color: white;
 }
 
 a{
@@ -138,6 +159,7 @@ iframe{
     display:flex;
     gap: 7px;
 }
+
 .profile-info-details p:first-child{
     font-size: smaller;
     background-color: rgb(255, 162, 0);

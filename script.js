@@ -83,7 +83,12 @@ function displayMovie(movie, trailerKey) {
     footerClass.classList.remove('remove-class');
     
     bodyMovie.innerHTML = '';
-    
+      if (movie.backdrop_path) {
+        bodyMovie.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`;
+        bodyMovie.style.backgroundSize = 'cover';
+        bodyMovie.style.backgroundPosition = 'center';
+    }
+
     // MAKES CONTAINER VISIBLE
     bodyMovie.classList.add('visible');
     
@@ -103,11 +108,14 @@ function displayMovie(movie, trailerKey) {
                 <p id="movie-genres"><i class="fa-solid fa-tags"></i> ${genreNames}</p>
             </div>
         </div>
+    <div class="movie-overview">
         <p id="movie-overview">${movie.overview}</p>
+        </div>
         <div class="user-interaction">
             <a href="https://www.themoviedb.org/movie/${movie.id}" target="_blank"> <i class="fa-solid fa-circle-info"></i> More Info</a>
             ${trailerKey ? `<a href="https://www.youtube.com/watch?v=${trailerKey}" target="_blank"> <i class="fa-solid fa-play"></i> Play Trailer</a>` : ''}
         </div>
+    </div>
     `;
     
     bodyMovie.innerHTML = movieHTML;
